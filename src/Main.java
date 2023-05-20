@@ -97,7 +97,7 @@ public class Main {
     public static void task7() {
         System.out.println("Задача 7");
         int friday = 2;
-        for (; friday <= 31; friday = friday + 7) {
+        for (; friday <= 31; friday += 7) {
             System.out.println("Сегодня пятница " + friday + " -е число. Необходимо подготовить отчет».");
 
         }
@@ -105,7 +105,7 @@ public class Main {
 
     public static void task8() {
         System.out.println("Задача 8");
-        for (int year = 0; year < 2123; year = year + 79) {
+        for (int year = 0; year < 2123; year += 79) {
             if (year > 1823) {
                 System.out.println(year);
             }
