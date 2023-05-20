@@ -15,11 +15,12 @@ public class Main {
         System.out.println("Задача 1");
         int contribution = 15_000;
         int total = 0;
-        int i = 0;
-        while (total < 2_459_000) {
-            i = i + 1;
+        int expectedAmount = 2_459_000;
+        int month = 0;
+        while (total < expectedAmount) {
+            month ++ ;
             total = total + contribution;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей.");
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей.");
         }
     }
 
@@ -44,7 +45,7 @@ public class Main {
         int mortality = 8 * 1_000;
         int year = 0;
         while (year < 10) {
-            year = year + 1;
+            year ++ ;
             populationY = populationY + fertility - mortality;
             System.out.println("Год " + year + " численность населения состовляет " + populationY + " человек");
         }
@@ -54,13 +55,11 @@ public class Main {
         System.out.println("Задача 4");
         double contribution = 15_000;
         double percent = 0.07;
-        double total = 0;
-        int i = 0;
-        while (total < 12_000_000) {
-            i = i + 1;
-            total = total + contribution * percent;
-            total = total + contribution;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей.");
+        int month = 0;
+        while (contribution < 12_000_000) {
+            month ++ ;
+            contribution = contribution + contribution * percent;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + contribution + " рублей.");
 
         }
     }
@@ -70,13 +69,13 @@ public class Main {
         double contribution = 15_000;
         double percent = 0.07;
         double total = 0;
-        int i = 0;
+        int month = 0;
         while (total < 12_000_000) {
-            i = i + 1;
+            month ++ ;
             total = total + contribution * percent;
             total = total + contribution;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + " Итого " + total);
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " Итого " + total);
             }
         }
     }
@@ -86,11 +85,11 @@ public class Main {
         double contribution = 15_000;
         double percent = 0.07;
         double total = 0;
-        for (int i = 1; i <= 9 * 12; i++) {
+        for (int month = 1; month <= 9 * 12; month ++) {
             total = total + contribution * percent;
             total = total + contribution;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + " Итого " + total);
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " Итого " + total);
             }
         }
     }
