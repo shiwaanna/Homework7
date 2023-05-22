@@ -40,14 +40,14 @@ public class Main {
     public static void task3() {
         System.out.println(" ");
         System.out.println("Задача 3");
-        int populationY = 12_000_000;
-        int fertility = 17 * 1_000;
-        int mortality = 8 * 1_000;
+        int population = 12_000_000;
         int year = 0;
-        while (year < 10) {
+        while (year <= 10) {
+            int fertility = population / 1000 * 17;
+            int mortality = population / 1000 * 8;
+            population = population + fertility - mortality;
             year ++ ;
-            populationY = populationY + fertility - mortality;
-            System.out.println("Год " + year + " численность населения состовляет " + populationY + " человек");
+            System.out.println("Год " + year + " численность населения состовляет " + population + " человек");
         }
     }
 
